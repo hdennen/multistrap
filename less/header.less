@@ -1,0 +1,417 @@
+// Insert your styling here.
+/*****************************navbar theming************************/
+@bglighter      : #525252;
+@bgDefault      : #494949;
+@bgHighlight    : #636363;
+@colDefault     : #eedfdf;
+@colHighlight   : #dce8da;
+@bgFOverview    : #4CAECC;
+@bgMAF          : #7ABD99;
+@bgRAF          : #C8D5B9; 
+@bgPPenF        : #8FC0A9; 
+@bgPProF        : #68B0AB; 
+@bgUPF          : #4A7C59; 
+//fades for titles
+@bgFOverFade    : rgba(76, 174, 204, 0.4);
+@bgMAFfade      : rgba(122, 189, 153, 0.4);
+@bgRAFfade      : rgba(200, 213, 185, 0.4); 
+@bgPPenFfade    : rgba(143, 192, 169, 0.4);
+@bgPProFfade    : rgba(104, 176, 171, 0.4); 
+@bgUPFfade      : rgba(74, 124, 89, 0.4); 
+@dropDown       : true;
+
+.ddm() when (@dropDown) {
+
+  .dropdown-menu > .active > a{
+    background-color: @bgHighlight;
+  }
+  /*.dropdown-menu > .active > a.maf{
+    background-color: @bgMAF;
+  }
+  .dropdown-menu > .active > a.raf{
+    background-color: @bgRAF;
+  }
+  .dropdown-menu > .active > a.ppenf{
+    background-color: @bgPPenF;
+  }
+  .dropdown-menu > .active > a.pprovf{
+    background-color: @bgPProF;
+  }
+  .dropdown-menu > .active > a.upf{
+    background-color: @bgUPF ;
+  }*/
+  > .dropdown-menu {
+    background-color: @bgDefault;
+    > li > a {
+      color: @colDefault;
+      border-bottom-style: solid; // to give the link borders a place
+      border-bottom-width: 4px;
+      font-size: 16px;
+      &:hover,  &:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight;
+        }} 
+/*    > li > a.maf:hover { //added this
+            border-bottom-style: solid;
+            border-bottom-color: @bgMAF;
+          } // to here*/
+    .divider {
+      background-color: @bgHighlight;}}}
+.navbar-default {
+  background-color: @bglighter;
+  border-color: @bgDefault;
+  .navbar-brand {
+    color: @colDefault;
+    &:hover, &:focus { 
+      color: @colHighlight; }}
+  .navbar-text {
+    color: @colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: @colDefault;
+        &:hover,  &:focus {
+          color: @colHighlight; }}
+      .ddm }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight; }}}
+  .navbar-toggle {
+    border-color: @bgHighlight;
+    &:hover, &:focus {
+      background-color: @bgHighlight; }
+    .icon-bar {
+      background-color: @colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: @colDefault; }
+  .navbar-link {
+    color: @colDefault;
+    &:hover {
+      color: @colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: @colDefault;
+      &:hover, &:focus {
+        color: @colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight; }}}
+}
+@borderRight    : #2b2b2b;
+@borderLeft     : #6c6c6c;
+.navbar-nav.nav-justified > li, .dropdown-menu.nav-justified > li {
+    border-left: @borderLeft;
+    border-right: @borderRight;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+}
+.navbar-nav.nav-justified > li.first {
+    border-left:none;
+}
+.navbar-nav.nav-justified > li.last {
+    border-right:none;
+}
+.navbar-nav.nav-justified > li > a:hover {
+  background-color: @bgHighlight;
+}
+/************************ Custom nav dropdown link borders **********************/
+.dropdown-menu {
+  > li > a.fund-overview {
+  border-bottom-color: @bgFOverview;
+  } 
+  > li > a.maf {
+  border-bottom-color: @bgMAF;
+  } 
+  > li > a.raf {
+  border-bottom-color: @bgRAF;
+  } 
+  > li > a.ppenf {
+  border-bottom-color: @bgPPenF;
+  } 
+  > li > a.pprovf {
+  border-bottom-color: @bgPProF;
+  }
+  > li > a.upf {
+  border-bottom-color: @bgUPF;
+  }   
+}
+
+/******************* navbar spacing *********************/
+@media (min-width: 768px){
+  .navbar-nav.nav-justified > li {
+    float:none;
+  }
+  .nav-justified > .dropdown .dropdown-menu {
+    /* top: auto; */
+    left: -210%;
+    /* position: absolute; */
+    width: 100vw;
+    /* height: 200px; */
+  }
+  .navbar-nav > li > a {
+    padding: 10px;
+  }
+}
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    min-height: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+.node-type-fund .navbar {
+  margin-bottom: 45px;
+}
+.dropdown-menu > li > a {
+    white-space: pre-wrap;
+    padding: 10px 0;
+}
+.dropdown-menu {
+  padding:0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-bottom: none;
+}
+
+
+/***************** Branding bar elements ********************/
+logo img {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto 0 auto;
+    display: block;
+}
+/***************** Page title area **********************/
+.page-header { //this is the h1 title
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: none;
+}
+.node-type-article .page-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+body.page-funds, body.page-node-4, body.page-node-3, body.page-node-6, body.page-node-7, body.page-node-8 {
+  .page_title_bar {
+    padding-top: 50px
+  }
+}
+h1.page-header {
+    color: #fff; 
+    font-weight: 300;
+    /*font-family: 'Roboto Condensed', sans-serif;*/
+    font-size: 4.2em;
+    /* text-shadow: 1px -1px rgba(0, 0, 0, 0.7); */
+    text-transform: uppercase;
+    display: inline-flex;
+    padding: 5px 20px;
+    /* background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(3,3,3,0.3)), to(rgba(3,3,3,0)), color-stop(1,#333333) ); */
+    margin-bottom: 80px; //fallback
+    border-radius: 10px;
+    margin-left: -400px;
+    padding-left: 400px;
+}
+.node-type-fund h1.page-header {
+  margin-bottom: 4vh;
+}
+.container.fund-intro {
+  margin-top: 60px;
+  color: #f2f2f2;
+  margin-bottom: 100px;
+}
+
+.front-hero {
+  margin-top: 100px;
+  color: #f2f2f2;
+  margin-bottom: 200px;
+}
+.fund-intro, .front-hero {
+  h3 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px){
+  .who-for, .why-choose {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #F2F2F2;
+  }
+}
+/*************************************************************Creates blurred effect*/
+
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);*/
+@spray          : url("https://lh3.googleusercontent.com/pQI4Kr3CzsdWKivg-kH8rGqsrG0wDX4hFb7dBvzuU64=w1186-h742-no");
+@sprayBlur      : url("https://lh3.googleusercontent.com/aFXz819XClzyf4VcoMPtfCbeekqkXRzRWZWWrf6RITM=w1186-h742-no");
+@plains         : url("https://lh3.googleusercontent.com/FR1rGprfaQ92BWdAfdhPWyGl20EQRLyehsjiptw-4J4=w1256-h785-no");
+@plainsBlur     : url("https://lh3.googleusercontent.com/OVZ3eR6E4Gx85yuuQYY5DpCcnubQHmTNTauAZOCSS4k=w1256-h785-no");
+@train          : url("https://lh3.googleusercontent.com/KXLV9RZUwt8xJoQRJFBTkR1ExuNi_frW5hMmouS8zNE=w1727-h627-no");
+@trainBlur      : url("https://lh3.googleusercontent.com/dXjI7C2Z39lpBLXSEeHxjGaaL-N8QHzl-vKIScvY8IU=w1727-h627-no");
+@forest1        : url("https://lh3.googleusercontent.com/7lv2xzgUu6RZHrZvpy6koPb2x0-82kk06fhHMD7SALM=w1439-h899-no");
+@forest1Blur    : url("https://lh3.googleusercontent.com/mqaSHODy7EP8LFg4qwVADkLOfPYhtT_1Oh3QnnRBwOY=w1439-h899-no");
+@forest2        : url("https://lh3.googleusercontent.com/FXg6C2zAoiVAnU-kzg9rXu3TGLoCy5GAWfgH_HrTfzI=w1599-h899-no");
+@forest2Blur    : url("https://lh3.googleusercontent.com/a4Y_TCHHG3tynQVSBG5MA_rb-cRliOa08bUQVwdTlbE=w1599-h899-no");
+@lake1          : url("https://lh3.googleusercontent.com/CktW1WmfnkdHTINGDo0GcTxvDMK8zkk4g31ShGZMIlc=w1640-h899-no");
+@lake1Blur      : url("https://lh3.googleusercontent.com/Tx8H4Nie09My6epL7gpVbx-F-F4AIEgFqFGeXuRWkqw=w1640-h899-no");
+@california     : url("https://lh3.googleusercontent.com/SvojyhtavdHx2xZVC9G9kOBwQ35ghf6rT5r8g5jUMWA=w1648-h870-no");
+@californiaBlur : url("https://lh3.googleusercontent.com/TUD0JVfDNO3XpNGVWh2pp3n-LeDsFzSQRNZxoMPi-DM=w1648-h870-no");
+@mirrorlake     : url("https://lh3.googleusercontent.com/jUf_JVbpuWw9uqOI_HJCPrG9XHec0NDdCnlkj_AWDcg=w1439-h899-no");
+@mirrorlakeBlur : url("https://lh3.googleusercontent.com/dz_oaPZdtTTuFlHlkbSgxIXu59TkqXKaPmjvY_5whLI=w1439-h899-no");
+@subtle         : url("https://lh3.googleusercontent.com/7W9WvV-2ohhD8KWBPG78u05ZtjlmmlMaLJWlfQzTSdk=w1349-h899-no");
+@subtleBlur     : url("https://lh3.googleusercontent.com/-r_l3ByIclTUpoZqOQkYJ1sf85q_rtxIHKW9WKmsfnM=w1349-h899-no");
+
+.background-image(@shaded...){
+  background-image: -moz-linear-gradient(@shaded);
+  background-image: -webkit-linear-gradient(@shaded);
+  background-image: linear-gradient(@shaded);
+}
+
+
+body.front .bar.content_bar { //front page hero
+  background-image: @spray;
+}
+.front-hero {
+  background-image: @sprayBlur;
+}
+
+.page_title_bar {  //default page header bar
+  background-image: @train;
+}
+h1.page-header{
+  background-image: @trainBlur;
+}
+.node-type-fund .page_title_bar, .front .bar.content_bar { //full viewport image
+    height: 100vh;
+    min-height: 700px;
+}
+
+body.page-node-3 .page_title_bar {
+  background-image: @forest1;
+}
+body.page-node-3 { h1.page-header, .container.fund-intro {
+  background-image: @forest1Blur;
+}}
+body.page-node-4 .page_title_bar {
+  background-image: @forest2;
+}
+body.page-node-4 { h1.page-header, .container.fund-intro {
+  background-image: @forest2Blur;
+}}
+body.page-node-6 .page_title_bar {
+  background-image: @lake1;
+}
+body.page-node-6 { h1.page-header, .container.fund-intro {
+  background-image: @lake1Blur;
+}}
+body.page-node-7 .page_title_bar {
+  background-image: @california;
+}
+body.page-node-7 { h1.page-header, .container.fund-intro {
+  background-image: @californiaBlur;
+}}
+body.page-node-8 .page_title_bar {
+  background-image: @subtle;
+}
+body.page-node-8 { h1.page-header, .container.fund-intro {
+  background-image: @subtleBlur;
+}}
+
+
+h1.page-header, .container.fund-intro, .front-hero, .page_title_bar, body.front .bar.content_bar {
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*  &.shaded{
+    .background-image(0deg, rgba(0,0,0,.2), rgba(0,0,0,.2)), @trainBlur;
+  }*/
+
+
+.container.fund-intro, .front-hero {
+  width: 90%;
+  /*left: -webkit-calc( 50% - 250px );*/
+  border-radius: 5px;
+  -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  //display: flex;
+  transition: box-shadow .3s ease;
+}
+
+.container.fund-intro .row {
+  margin: auto;
+}
+.fund-intro, .front-hero {
+  h1, h3, p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+}
+h1.page-header {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.tinted h1, .tinted h2, .tinted a, .tinted p {
+  color: black;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { //ipad only
+  h1.page-header, .container.fund-intro, .front-hero, .page_title_bar, body.front .bar.content_bar {
+    background-attachment: scroll;
+    background-position: ;
+  }
+  h1.page-header {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  body.page-node-3, body.page-node-4, body.page-node-6, body.page-node-7, body.page-node-8 {
+    h1.page-header {
+      background-image: none;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+
+/***************************** Branding / Search Bar ***********************/
+.form-search button.btn {
+  padding: 5px 20px;
+  line-height: 2.75;
+}
+.form-search  input.form-control {
+  height:50px;
+  font-size: 18px;
+}
+section#block-search-form {
+  padding: 10px 20px 0 20px;
+}
+span.glyphicon.glyphicon-user {
+    margin-right: 10px;
+}
+.lead {
+  margin: 0;
+}

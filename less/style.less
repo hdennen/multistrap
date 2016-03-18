@@ -1,0 +1,109 @@
+// Bootstrap library.
+@import 'bootstrap.less';
+
+// Base-theme overrides.
+@import 'overrides.less';
+
+// Theme specific.
+@import 'header.less';
+@import 'content.less';
+@import 'footer.less';
+
+/********************** basic styling *********************/
+
+/*@noise1		: url("https://lh3.googleusercontent.com/ploC-S29HizQvnx3WuClrQunrhsUXhoVoTVwyGAhQUU=s200-no"); //lighter, both based on F6F6F6
+@noise2		: url("https://lh3.googleusercontent.com/JwX7zxPwgHjoqsxV7AIn3hNnhOZPg1oSzokc5X-cNS0=s200-no"); //darker*/
+
+body {
+    font-size: 16px;
+    color: #474747;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #F6F6F6;
+
+}
+table {
+	width: 100%;
+	/*border: 1px solid #c7c7c7;*/
+}
+h1, h2, h3, th, .fund-intro p {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+th {
+	font-weight: 300;
+	font-size: 20px;
+}
+td {
+	font-size: 14px;
+}
+p, .main-container li, td {
+margin: 0 0 20px;
+line-height: 180%;
+font-family: 'Roboto', sans-serif;
+}
+p a, table td a {
+	border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: @bgMAF;
+    display: inline-block;
+	&:hover {
+		background-color: @bgRAF;
+	}
+}
+img {
+	width: 100%;
+}
+.well {
+	border-radius: 0;
+	background-color: #fff;
+	transition: 0.3s ease;
+/*	box-shadow: -7px -8px 19px -8px #dedede;*/
+}
+
+a {
+	color: #474747;
+	&:hover, &:focus {
+		color: #474747;
+		text-decoration: none;
+	}
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+a:focus { 
+    outline: none; 
+}
+/*************************************icons****************************/
+.news-icon .glyphicon {
+    top: 8px;
+    font-size: 30px;
+    left: 16px;
+}
+/************************************ page navigation *********************/
+#page-nav {
+    position: fixed;
+    top: 300px;
+    right: 10px;
+    a.previous, a.next {
+	    padding: 17px 27px;
+	    display: block;
+	    width: inherit;
+	    background-color: rgba(255, 255, 255, 0.7);
+	    &:hover{
+	    	background-color: rgba(255,255,255, .9);
+		}
+    }
+    a.previous{
+	    border-bottom: #656464;
+	    border-bottom-style: solid;
+	    border-bottom-width: 1px;
+	    padding-left: 29px;
+	}
+
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	#page-nav {
+		display: none;
+	}
+}

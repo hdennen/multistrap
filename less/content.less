@@ -42,6 +42,9 @@
 .bar {
 	padding: 20px 0 20px 0;
 }
+.bar_1, .bar_2, .bar_3 {
+    padding: 50px 0;
+}
 .large-copy p {
 	font-size: 18px;
 }
@@ -61,28 +64,38 @@
 .node-type-article .content_bar {
 }
 /**********************************home page**************************************/
+.front .node .content .field-item a {
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-color: transparent;
+}
+.front .node .content .field-item a:hover {
+    background-color: transparent;
+}
 .front-hero{
 	text-align: center;
-	margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
+	margin: 100px auto 200px auto;
     padding: 0px;
+    color: #f2f2f2;
 
 	.tinted {
-	  background: rgba(174, 147, 99, .4);
+	  background: rgba(217,212,244,0.4); 
+
 	}
 	.bg-fades {
 	  padding: 50px 20px;
 	}
 	p a {
 		border-style: none;
-		&:hover, &:focus {
-			background-color: transparent;
-			color: #221B13;
-		}
 	}
 	span.glyphicon {
 	    font-size: 40px;
+	}
+}
+.investors, .managers {
+	&:hover p a, &:focus p a{
+		background-color: transparent;
+		color: #2A3239;
 	}
 }
 
@@ -111,6 +124,10 @@
 	    &:hover {
 	    	border-color: @borderHover;
 	    }
+}
+.down-button {
+    font-size: 38px;
+    text-align: center;
 }
 
 /********************************* taxonomy pages ****************************************/
@@ -155,9 +172,6 @@
 }
 
 aside.sidebar-second {
-    /* border-left-style: solid; */
-    /* border-left-width: 1px; */
-    /* border-left-color: #c7c7c7; */
     background-color: #fff;
     a {color: #474747;}
 	.views-field-title .col-md-2.min-age {
@@ -315,6 +329,9 @@ div#postscript {
 	.views-row-5 {
 	background-color: @bgUPF;
 	}
+	.views-row-6 {
+	background-color: @bgFOverview;
+	}
 }
 .view-funds span.img-circle {
     border-style: solid;
@@ -333,19 +350,24 @@ div#postscript {
 .view-funds .img-circle a {
     color: #fff;
     display: block;
-    padding: 80px;
-    margin: -72px;
+    text-align: center;
+    padding: 73px;
+    margin: -80px;
     transition: color 0.3s ease;
     &:hover {
     	color:#474747;
     }
 }
-
 @media (max-width: 1000px) {
 	.view-funds span.img-circle {
-	    margin: 0 auto;
+    //margin: 0 auto;
+   	height: 135px;
+	  width: 135px;
+	  h2 {font-size: 20px;}
+	  a {padding: 62px;}
+
 	}
-	.col-md-2-4.views-row {
+	.col-md-2.views-row {
 	    padding: 20px 0;
 	}
 	.tips-intro {
@@ -354,7 +376,7 @@ div#postscript {
 }
 
 .container_fluid.bar.postscript_2 {
-    padding: 70px 0;
+    padding: 100px 0;
 }
 
 @media (min-width:990px) {
@@ -365,23 +387,43 @@ div#postscript {
 	    visibility: visible;
 	    border-right-width: 1px;
 	    border-color: #c7c7c7;
-	    height: 492px;
+	    height: 274px;
 	    border-right-style: solid;
 	    content: "";
+	}
+	.view-id-senior_tips.view-display-id-block_1 {
+    margin-top: 65px;
 	}
 }
 @media /*(min-width:990px) and */(max-width:1200px) {
 	section#block-views-senior-tips-block-1:after {
 		left: 588px;
 	}
+	.view-id-senior_tips.view-display-id-block_1 {
+    margin-top: 65px;
+	}
 }
-/********************************* Funds Page ***********************************/
+.more-link {
+	text-align: center;
+}
 
+/********************************* Funds Page ***********************************/
+.page-funds .fixed {
+	position: relative;
+}
+body.page-funds {
+	margin-top: 0px !important;
+}
 .page-funds {
 	.view-funds {
 		transition: all 3ms ease;
+		.views-row-odd {
+			background-color: #fff;
+		}
 		.views-row {
-	    padding: 100px 0;
+	    height: 100vh;
+	    padding: 100px 0; //fallback
+		padding: 10% 0;
 	    	h2 {
 		    margin: 100px -9px;
 		    padding: 20px 28px;
@@ -389,9 +431,7 @@ div#postscript {
 		    border-right-width: 16px;
 			}
 		}	
-		.views-row-odd {
-			background-color: #fff;
-		}
+
 		a.img-circle {
 	    border-style: solid;
 	    border-width: 1px;
@@ -402,7 +442,7 @@ div#postscript {
 		}
 		.views-row-1 h2 {
 	    border-color: @bgRAF;
-	    	&:hover, a:hover {
+	    	&:hover{
 	    		background-color: @bgRAF;
 	    	}
 		}
@@ -449,16 +489,207 @@ div#postscript {
 	}
 }
 @media(min-width: 768px){
-	.page-funds .bar.content_bar {
-		padding-top: 0px;
+	.page-funds {
+		.bar.content_bar {
+			padding-top: 0px;
+		}
+		.who-for, .why-choose, .usps {
+		  padding: 0 20px;
+		  margin: 95px 0; //fallback
+		}
 	}
-	.page-funds .who-for, .why-choose, .usps {
-	  padding: 0 20px;
-	  margin: 95px 0; //fallback
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	.page-funds .view-funds .views-row {
+		height: inherit;
 	}
+
 }
 /************************************************** fund pages */
 .row.bg-fades.shaded {
     background-color: rgba(0,0,0,0.3);
     border-radius: 4px;
+}
+/********************************************** About us page *********************/
+body.page-node-2 {
+	aside.sidebar-second {
+	    box-shadow: none;
+	    background-color: @body-bg;
+	}
+	.container_fluid.bar_1, .container_fluid.bar_3 {
+    background-color: #ffffff;
+    background-size: cover;
+    background-attachment: fixed;
+	}
+	.container_fluid.bar_1 {
+	    background-image: @california;
+	}
+	.container_fluid.bar_2 {
+		background-color: transparent;
+	}
+	.container_fluid.bar_3 {
+	    background-image: @mirrorlake;
+	}
+}
+aside.sidebar-second nav {
+	background-color: @body-bg;
+	display: inline-block;
+	margin-left: 20px;
+}
+/* sidebar */
+.about-sidebar {
+    padding-left: 20px;
+}
+
+/* all links */
+.about-sidebar .nav>li>a,
+.isotope-options li>a {
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+/* nested links */
+.about-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+/* active & hover links */
+.about-sidebar .nav>.active>a, 
+.about-sidebar .nav>li>a:hover,
+.isotope-options li>a:hover {
+    //color: @bgUPF;                 
+    text-decoration: none;          
+    background-color: #e0e0e0;  
+    border-left-color: @bgUPF; 
+}
+/*.about-sidebar .nav>li>a:focus {
+	color:inherit;
+	text-decoration: none;
+	background-color: inherit;
+	border-left-color: transparent;
+}*/
+/* all active links */
+.about-sidebar .nav>.active>a, 
+.about-sidebar .nav>.active:hover>a,
+.about-sidebar .nav>.active:focus>a {
+ 
+}
+/* nested active links */
+.about-sidebar .nav .nav>.active>a, 
+.about-sidebar .nav .nav>.active:hover>a,
+.about-sidebar .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+/* hide inactive nested list */
+.about-sidebar .nav ul.nav {
+    display: none;           
+}
+/* show active nested list */
+.about-sidebar .nav>.active>ul.nav {
+    display: block;           
+}
+/******************************************* Documents page *************************/
+.doc-type.Strategy {
+	.form, .synopsis, .policy {
+    	display: none;
+	}
+}
+.doc-type.Form {
+	.strategy, .synopsis, .policy {
+    	display: none;
+	}
+}
+.doc-type.Synopsis {
+	.strategy, .form, .policy {
+    	display: none;
+	}
+}
+.doc-type.Policy {
+	.strategy, .form, .synopsis {
+    	display: none;
+	}
+}
+.doc-type {
+    font-size: 26px;
+    margin: 22px 5px;
+}
+/**************************************** Documents Block **********************/
+span.field-content.well {
+    display: block;
+}
+/************************************************* Isotope *********************************/
+.isotope-element {
+    width: 97%;
+	height: 155px;
+    margin: 10px 10px;
+    background: transparent;
+    color: #474747;
+    a, a:hover, a:active, a:focus {
+    	color: #474747 !important;
+    }
+}
+.isotope-options {
+    background-color: transparent;
+    li {
+    	list-style-type: none;
+    	a {
+    		display: block;
+    	}
+    }
+}
+ul.isotope-filters.option-set.clearfix {
+    padding-left: 5px;
+}
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	.isotope-element {
+    	width: 97%;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.isotope-element {
+	    width: 440px;
+	    height: 120px;
+	}
+	.doc-type {
+		font-size: 26px;
+		margin: 22px 12px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.isotope-element {
+    	width: 580px;
+	}
+	.doc-type {
+		font-size: 26px;
+		margin: 20px 22px;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.isotope-element {
+    	width: 700px;
+	}
+	.doc-type {
+	    font-size: 26px;
+	    margin: 20px 30px;
+	}
 }

@@ -120,6 +120,9 @@
       <?php endif; ?>
       <article class="col-sm-8">
         <?php print render($page['content']); ?>
+        <?php $block = block_load('block', '19');
+$output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+print $output; ?>
       </article>
       <?php if (!empty($page['sidebar_second'])): ?>
         <aside class="sidebar-second col-sm-4" role="complementary">

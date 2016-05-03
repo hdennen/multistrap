@@ -7317,6 +7317,11 @@ button#edit-submit-senior-tips:active {
   -webkit-animation: none;
   animation: none;
 }
+/*********************************************************** reset filter button */
+.views-reset-button button#edit-reset {
+  margin: 0px auto;
+  display: block;
+}
 /***********************Make views rows clickable. rewrite field output to include bootstrap classes.*/
 .view-senior-tips .views-row.well {
   padding: 0;

@@ -1,7 +1,6 @@
 
 <!-- Branding begins Deleted secondary nav from here, my account and logout links unnecessary. -->
     <?php print $messages; ?>
-    <?php print render($page['top bar']); ?>
     <?php print render($page['header']); ?>
 <div id="branding" class="anchor container_fluid bar bar-branding">
   <div class="container">

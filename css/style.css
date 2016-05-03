@@ -7031,6 +7031,10 @@ span.glyphicon.glyphicon-user {
   margin: 0;
   text-align: center;
 }
+/***************************** header alerts ***********************/
+.region-header .alert {
+  margin-bottom: 0px;
+}
 .container_fluid.bar-branding {
   background-color: #eaeaea;
 }

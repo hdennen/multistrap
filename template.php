@@ -30,7 +30,7 @@ function bootstrap_multilect_menu_tree__primary($variables) {
 }
 function bootstrap_multilect_preprocess_region(&$variables, $hook) {
 	$region = $variables['region'];
-  if ($region !== 'navigation' && $region !== 'content' && $region !== 'highlighted' && $region !== 'sidebar_second' && $region !== 'sidebar_first') {
+  if ($region !== 'header' && $region !== 'navigation' && $region !== 'content' && $region !== 'highlighted' && $region !== 'sidebar_second' && $region !== 'sidebar_first') {
     $variables['classes_array'][] = 'container';
   }
 }
